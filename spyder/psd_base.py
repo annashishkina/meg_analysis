@@ -10,20 +10,28 @@ import mne
 from mne.time_frequency import psd_welch
 import numpy as np
 
+def ffff(fname, tmin, tmax, fmin, fmax, n_fft = 2048):
+    ##ffff
+    return psds
+psdsrrr = ffff(fname='')
+#------------------------------------------------------------------------------
 #READ MEG DATA FOR BASE CLOSED CONDITION DURING THE FIRST HALF OF DATA
+#------------------------------------------------------------------------------
 raw = mne.io.read_raw_fif('head_movement\\190131\\base_closed_raw.fif')
 raw.info['bads'] += ['MEG1433','MEG1822','MEG1843','MEG1412','MEG0943','MEG1033']
 picks = mne.pick_types(raw.info, meg='grad', eeg=False, eog=False,
                            stim=False, exclude='bads')
-#raw.plot_psd(picks=picks, tmin=tmin, tmax=tmax)
 tmin, tmax = 0, 60  # use the first 120s of data
-fmin, fmax = 290, 294  # look at frequencies between 
+fmin, fmax = 290, 294  # look at frequencies between
+raw.plot_psd(picks=picks, tmin=tmin, tmax=tmax) 
 n_fft = 2048  # the FFT size (n_fft). Ideally a power of 2
 psds, freqs = psd_welch(raw, picks=picks, tmin=tmin, tmax=tmax,
                         fmin=fmin, fmax=fmax)
 psds = 20 * np.log10(psds)
 
+#------------------------------------------------------------------------------
 #READ MEG DATA FOR BASE CLOSED CONDITION DURING THE FIRST HALF OF DATA
+#------------------------------------------------------------------------------
 raw2 = mne.io.read_raw_fif('head_movement\\190131\\base_closed_raw.fif')
 raw2.info
 raw2.info['bads'] += ['MEG1433','MEG1822','MEG1843','MEG1412','MEG0943','MEG1033']
