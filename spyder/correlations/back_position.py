@@ -42,7 +42,7 @@ def multi_power (fname, tmin, tmax, fmin_list, fmax_list):
     return np.array(multi)
 
 #------------------------------------------------------------------------------
-# Correlation between two psd vectors (first and second half of base_opened condition)
+# Correlation between two psd vectors (first and second half of back_opened condition)
 #------------------------------------------------------------------------------
 psd1 = multi_power('head_movement\\190131\\back_opened_raw.fif', tmin=0, tmax=60, 
              fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
@@ -52,7 +52,7 @@ back_opened = correlation(psd1, psd2)
 print(back_opened)
 
 #------------------------------------------------------------------------------
-# Correlation between two psd vectors (first and second half of base_closed condition)
+# Correlation between two psd vectors (first and second half of back_closed condition)
 #------------------------------------------------------------------------------
 psd1 = multi_power('head_movement\\190131\\back_closed_raw.fif', tmin=0, tmax=60, 
              fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
@@ -62,7 +62,7 @@ back_closed = correlation(psd1, psd2)
 print(back_closed)
 
 #------------------------------------------------------------------------------
-# Correlation between two psd vectors (first and second half of base_hand condition)
+# Correlation between two psd vectors (first and second half of back_hand condition)
 #------------------------------------------------------------------------------
 psd1 = multi_power('head_movement\\190131\\back_hand_raw.fif', tmin=0, tmax=60, 
              fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])

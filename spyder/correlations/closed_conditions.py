@@ -82,3 +82,62 @@ base_right_closed = correlation(psd1, psd2)
 print(base_right_closed)
 
 
+#------------------------------------------------------------------------------
+# Correlation between two half of psd vectors (front_closed and back_closed condition)
+#------------------------------------------------------------------------------
+psd1 = multi_power('head_movement\\190131\\front_closed_raw.fif', tmin=0, tmax=60, 
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+psd2 = multi_power('head_movement\\190131\\back_closed_raw.fif', tmin=60, tmax=120,
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+front_back_closed = correlation(psd1, psd2)
+print(front_back_closed)
+
+#------------------------------------------------------------------------------
+# Correlation between two half of psd vectors (front_closed and left_closed condition)
+#------------------------------------------------------------------------------
+psd1 = multi_power('head_movement\\190131\\front_closed_raw.fif', tmin=0, tmax=60, 
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+psd2 = multi_power('head_movement\\190131\\left_closed_raw.fif', tmin=60, tmax=120,
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+front_left_closed = correlation(psd1, psd2)
+print(front_left_closed)
+
+#------------------------------------------------------------------------------
+# Correlation between two half of psd vectors (front_closed and left_closed condition)
+#------------------------------------------------------------------------------
+psd1 = multi_power('head_movement\\190131\\front_closed_raw.fif', tmin=0, tmax=60, 
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+psd2 = multi_power('head_movement\\190131\\right_closed_raw.fif', tmin=60, tmax=120,
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+front_right_closed = correlation(psd1, psd2)
+print(front_right_closed)
+
+#------------------------------------------------------------------------------
+# Correlation between two half of psd vectors (back_closed and left_closed condition)
+#------------------------------------------------------------------------------
+psd1 = multi_power('head_movement\\190131\\back_closed_raw.fif', tmin=0, tmax=60, 
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+psd2 = multi_power('head_movement\\190131\\left_closed_raw.fif', tmin=60, tmax=120,
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+back_left_closed = correlation(psd1, psd2)
+print(back_left_closed)
+
+#------------------------------------------------------------------------------
+# Correlation between two half of psd vectors (back_closed and right_closed condition)
+#------------------------------------------------------------------------------
+psd1 = multi_power('head_movement\\190131\\back_closed_raw.fif', tmin=0, tmax=60, 
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+psd2 = multi_power('head_movement\\190131\\right_closed_raw.fif', tmin=60, tmax=120,
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+back_right_closed = correlation(psd1, psd2)
+print(back_right_closed)
+
+#------------------------------------------------------------------------------
+# Correlation between two half of psd vectors (left_closed and right_closed condition)
+#------------------------------------------------------------------------------
+psd1 = multi_power('head_movement\\190131\\left_closed_raw.fif', tmin=0, tmax=60, 
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+psd2 = multi_power('head_movement\\190131\\right_closed_raw.fif', tmin=60, tmax=120,
+             fmin_list=[290, 305.5, 313, 319.5], fmax_list=[294, 308.5, 315, 322.5])
+left_right_closed = correlation(psd1, psd2)
+print(left_right_closed)
