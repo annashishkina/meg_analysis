@@ -30,3 +30,12 @@ front = coil_position('head_movement\\190131\\front_opened_raw.fif').transpose()
 back = coil_position('head_movement\\190131\\back_opened_raw.fif').transpose()
 left = coil_position('head_movement\\190131\\left_opened_raw.fif').transpose()
 right = coil_position('head_movement\\190131\\right_opened_raw.fif').transpose()
+
+
+
+
+
+
+
+
+
