@@ -75,23 +75,3 @@ fig.colorbar(c, ax=axes.ravel().tolist())
 plt.show()
 plt.savefig('head_pos_eig.png')
 
-
-
-
-raw = mne.io.read_raw_fif('head_movement\\190131\\base_opened_raw.fif', preload=True)
-raw.info['bads'] += ['MEG1433','MEG1822','MEG1843','MEG1412','MEG0943','MEG1033']
-raw.info['sfreq'] = 700.
-picks = mne.pick_types(raw.info, meg='grad', eeg=False, eog=False,
-                       stim=False, exclude='bads')
-raw.crop(0.,120.)
-frange = raw.filter(l_freq=290, h_freq=294, picks=picks)
-ch_time = frange.get_data(picks=picks)
-matrix = ch_time.dot(ch_time.T)
-w, v = eig(matrix)
-
-print()
-
-
-vectors.append(princ)
-    position = np.hstack(vectors)
-    return np.array(position)
