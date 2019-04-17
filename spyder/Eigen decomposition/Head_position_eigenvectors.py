@@ -70,7 +70,7 @@ for pos in ([0, 1, 2, 3, 4]):
 fig.tight_layout()
 fig.colorbar(c, ax=axes.ravel().tolist())
 plt.show()
-
+plt.savefig('head_pos_eig.png')
 
 
 
